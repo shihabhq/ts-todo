@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div class="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
+          <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">
+            My Todo List
+          </h1>
+
+          <!-- Input and Button -->
+          <div class="flex items-center gap-2 mb-4">
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="Enter a new task..."
+              class="form-input flex-1 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400" />
+            <button
+              id="addTaskButton"
+              class="px-4 py-2 add-btn bg-blue-500 text-white font-medium rounded-lg shadow hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+              Add
+            </button>
+          </div>
+
+          <!-- Task List -->
+          <ul id="taskList" class="task-list space-y-3">
+            <!-- Task Item -->
+            <li
+              class="flex items-center justify-between bg-gray-50 border border-gray-300 rounded-lg px-4 py-2 shadow">
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  id="taskCheckbox"
+                  class="h-5 w-5 text-blue-500 focus:ring-blue-400 focus:ring-2 rounded" />
+                <label for="taskCheckbox" class="ml-3 text-gray-800"
+                  >Sample Task</label
+                >
+              </div>
+              <button
+                class="text-red-500 hover:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-400">
+                Delete
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
